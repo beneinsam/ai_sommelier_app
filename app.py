@@ -1,7 +1,7 @@
 import streamlit as st
 from sommelier import search_wine, recommand_wine, describe_dish_flavor
 
-st.title("AI 소믈리에가 추천하는 음식 짝궁 와인")
+st.title("AI 소믈리에 추천, 음식 짝궁 와인")
 
 col1, col2 = st.columns([3, 1])
 
