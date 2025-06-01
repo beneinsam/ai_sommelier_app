@@ -81,7 +81,9 @@ def search_wine(dish_flavor):
     ) 
     return{
         "dish_flavor": dish_flavor,
-        "wine_reviews": "\n\n".join([doc.page_content for doc in results]) 
+        "wine_reviews": "\n\n".join([doc.page_content for doc in results]) ,
+        "similarities": [score for doc, score in results]
+
     }
 
 def recommand_wine(inputs):

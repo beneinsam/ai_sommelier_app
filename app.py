@@ -27,6 +27,9 @@ with col1:
                 wine_search_result = search_wine(dish_flavor)
                 st.markdown("#### 🍷 와인 리뷰 검색 결과")
                 st.text(wine_search_result['wine_reviews'])
+                for idx, (review, score) in enumerate(zip(wine_search_result['wine_reviews'], wine_search_result['similarities'])):
+                    st.write(f"**[{idx+1}] 유사도: {score:.2f}**")
+                    st.text(review)
 
             with st.spinner("3단계: AI 소믈리에가 와인 페어링에 대한 추천글을 생성하는 중..."):
                 wine_recommandation = recommand_wine({
