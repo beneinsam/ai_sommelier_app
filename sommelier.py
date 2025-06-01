@@ -75,7 +75,7 @@ def describe_dish_flavor(image_bytes, query):
     return llm.invoke(messages).content
 
 def search_wine(dish_flavor):
-    results = vector_store.similarity_search(
+    results = vector_store.similarity_search_with_score(
         dish_flavor,
         k=2
     ) 
